@@ -22,7 +22,7 @@
                 <h2>Frequently Asked Questions</h2>
                 <div class="faq-list">
                     <!-- FAQ items - easily extensible by adding new .faq-item divs -->
-                    <div class="faq-item">
+                    <div class="faq-item" id="faq-get-started">
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
@@ -40,7 +40,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item">
+                    <div class="faq-item" id="faq-enable-location-services">
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
@@ -52,7 +52,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item">
+                    <div class="faq-item" id="faq-enable-background-geotagging">
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
@@ -69,7 +69,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item">
+                    <div class="faq-item" id="faq-pair-camera-again">
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
@@ -81,7 +81,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item">
+                    <div class="faq-item" id="faq-camera-wont-connect">
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
@@ -98,7 +98,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item">
+                    <div class="faq-item" id="faq-app-not-recording-location">
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
@@ -118,7 +118,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item">
+                    <div class="faq-item" id="faq-fujifilm-location-sync">
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
@@ -145,7 +145,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item">
+                    <div class="faq-item" id="faq-sony-location-sync">
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
@@ -170,7 +170,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item">
+                    <div class="faq-item" id="faq-fujifilm-outdated-location">
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
@@ -188,7 +188,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item">
+                    <div class="faq-item" id="faq-compatible-cameras">
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
@@ -220,7 +220,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item">
+                    <div class="faq-item" id="faq-free-vs-pro">
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
@@ -243,7 +243,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item">
+                    <div class="faq-item" id="faq-contact-support">
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
@@ -269,17 +269,91 @@
         </footer>
     </div>
     <script>
+        // Function to expand a FAQ item
+        function expandFaq(faqItem) {
+            const button = faqItem.querySelector('.faq-toggle');
+            const answerWrapper = faqItem.querySelector('.faq-answer-wrapper');
+            const icon = button.querySelector('.faq-icon');
+            
+            button.setAttribute('aria-expanded', 'true');
+            answerWrapper.classList.add('expanded');
+            icon.textContent = '−';
+        }
+
+        // Function to collapse a FAQ item
+        function collapseFaq(faqItem) {
+            const button = faqItem.querySelector('.faq-toggle');
+            const answerWrapper = faqItem.querySelector('.faq-answer-wrapper');
+            const icon = button.querySelector('.faq-icon');
+            
+            button.setAttribute('aria-expanded', 'false');
+            answerWrapper.classList.remove('expanded');
+            icon.textContent = '+';
+        }
+
+        // Function to toggle a FAQ item
+        function toggleFaq(faqItem) {
+            const button = faqItem.querySelector('.faq-toggle');
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            
+            if (isExpanded) {
+                collapseFaq(faqItem);
+            } else {
+                expandFaq(faqItem);
+            }
+        }
+
+        // Set up click handlers for all FAQ toggles
         document.querySelectorAll('.faq-toggle').forEach(button => {
             button.addEventListener('click', () => {
-                const isExpanded = button.getAttribute('aria-expanded') === 'true';
-                const answerWrapper = button.closest('.faq-item').querySelector('.faq-answer-wrapper');
-                const icon = button.querySelector('.faq-icon');
+                const faqItem = button.closest('.faq-item');
+                const faqId = faqItem.id;
                 
-                button.setAttribute('aria-expanded', !isExpanded);
-                answerWrapper.classList.toggle('expanded', !isExpanded);
-                icon.textContent = !isExpanded ? '−' : '+';
+                toggleFaq(faqItem);
+                
+                // Update URL hash
+                if (faqItem.querySelector('.faq-toggle').getAttribute('aria-expanded') === 'true') {
+                    window.location.hash = faqId;
+                    // Smooth scroll to the FAQ item
+                    setTimeout(() => {
+                        faqItem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
+                } else {
+                    // Remove hash if collapsing
+                    if (window.location.hash === '#' + faqId) {
+                        history.replaceState(null, '', window.location.pathname + window.location.search);
+                    }
+                }
             });
         });
+
+        // Check URL hash on page load
+        function checkHashOnLoad() {
+            const hash = window.location.hash.substring(1); // Remove the '#'
+            if (hash) {
+                const faqItem = document.getElementById(hash);
+                if (faqItem && faqItem.classList.contains('faq-item')) {
+                    expandFaq(faqItem);
+                    // Scroll to the FAQ item after a short delay to ensure it's expanded
+                    setTimeout(() => {
+                        faqItem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
+                }
+            }
+        }
+
+        // Handle hash changes (e.g., browser back/forward buttons)
+        window.addEventListener('hashchange', () => {
+            // Collapse all FAQs first
+            document.querySelectorAll('.faq-item').forEach(item => {
+                collapseFaq(item);
+            });
+            // Then expand the one in the hash
+            checkHashOnLoad();
+        });
+
+        // Check hash on initial page load
+        checkHashOnLoad();
     </script>
 </body>
 </html>
