@@ -9,33 +9,48 @@
 <body>
     <div class="container">
         <header>
-            <h1>GeoLink Pro</h1>
-            <p class="subtitle">Support</p>
+            <div class="language-selector">
+                <select id="language-select" aria-label="Select language">
+                    <option value="en">English</option>
+                    <option value="zh-Hans">简体中文</option>
+                    <option value="zh-Hant">繁體中文</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="it">Italiano</option>
+                    <option value="es-ES">Español (España)</option>
+                    <option value="es-419">Español (Latinoamérica)</option>
+                    <option value="pt-BR">Português (Brasil)</option>
+                </select>
+            </div>
+            <h1 data-i18n="header_title">GeoLink Pro</h1>
+            <p class="subtitle" data-i18n="header_subtitle">Support</p>
         </header>
 
         <main>
             <section class="intro">
-                <p>Welcome to the GeoLink Pro support page. Find answers to common questions and get help with the app.</p>
+                <p data-i18n="intro_text">Welcome to the GeoLink Pro support page. Find answers to common questions and get help with the app.</p>
             </section>
 
             <section class="faq">
-                <h2>Frequently Asked Questions</h2>
+                <h2 data-i18n="faq_heading">Frequently Asked Questions</h2>
                 <div class="faq-list">
                     <!-- FAQ items - easily extensible by adding new .faq-item divs -->
                     <div class="faq-item" id="faq-get-started">
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
-                                How do I get started with GeoLink Pro?
+                                <span data-i18n="faq_get_started_q">How do I get started with GeoLink Pro?</span>
                             </button>
                         </h3>
                         <div class="faq-answer-wrapper">
-                            <p class="faq-answer">Getting started with GeoLink Pro is simple:</p>
+                            <p class="faq-answer" data-i18n="faq_get_started_intro">Getting started with GeoLink Pro is simple:</p>
                             <ol class="faq-steps">
-                                <li>Open the GeoLink Pro app on your iPhone</li>
-                                <li>Prepare your camera by enabling Bluetooth pairing mode</li>
-                                <li>Pair your camera with the app through the Bluetooth connection</li>
-                                <li>Once paired, your camera will automatically connect and start geotagging your photos</li>
+                                <li data-i18n="faq_get_started_step1">Open the GeoLink Pro app on your iPhone</li>
+                                <li data-i18n="faq_get_started_step2">Prepare your camera by enabling Bluetooth pairing mode</li>
+                                <li data-i18n="faq_get_started_step3">Pair your camera with the app through the Bluetooth connection</li>
+                                <li data-i18n="faq_get_started_step4">Once paired, your camera will automatically connect and start geotagging your photos</li>
                             </ol>
                         </div>
                     </div>
@@ -44,11 +59,11 @@
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
-                                How do I enable location services?
+                                <span data-i18n="faq_enable_location_q">How do I enable location services?</span>
                             </button>
                         </h3>
                         <div class="faq-answer-wrapper">
-                            <p class="faq-answer">Go to Settings > Privacy & Security > Location Services and ensure Location Services is enabled. Then grant GeoLink Pro permission to access your location.</p>
+                            <p class="faq-answer" data-i18n="faq_enable_location_a">Go to Settings > Privacy & Security > Location Services and ensure Location Services is enabled. Then grant GeoLink Pro permission to access your location.</p>
                         </div>
                     </div>
 
@@ -56,15 +71,15 @@
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
-                                How do I enable background geotagging?
+                                <span data-i18n="faq_enable_background_q">How do I enable background geotagging?</span>
                             </button>
                         </h3>
                         <div class="faq-answer-wrapper">
-                            <p class="faq-answer">To enable background geotagging, make sure the following permissions and settings are configured:</p>
+                            <p class="faq-answer" data-i18n="faq_enable_background_intro">To enable background geotagging, make sure the following permissions and settings are configured:</p>
                             <ul class="faq-steps">
-                                <li>Set location permission to "Always" in Settings > Privacy & Security > Location Services > GeoLink Pro</li>
-                                <li>Grant Bluetooth permission when prompted by the app</li>
-                                <li>Keep Bluetooth enabled on your iPhone</li>
+                                <li data-i18n="faq_enable_background_step1">Set location permission to "Always" in Settings > Privacy & Security > Location Services > GeoLink Pro</li>
+                                <li data-i18n="faq_enable_background_step2">Grant Bluetooth permission when prompted by the app</li>
+                                <li data-i18n="faq_enable_background_step3">Keep Bluetooth enabled on your iPhone</li>
                             </ul>
                         </div>
                     </div>
@@ -73,11 +88,11 @@
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
-                                Do I need to pair my camera again if it's already paired with iOS?
+                                <span data-i18n="faq_pair_camera_q">Do I need to pair my camera again if it's already paired with iOS?</span>
                             </button>
                         </h3>
                         <div class="faq-answer-wrapper">
-                            <p class="faq-answer">Yes, you need to pair your camera within the GeoLink Pro app even if it's already paired with iOS. iOS apps don't have access to system Bluetooth pairing information, so each app needs to establish its own connection with your camera.</p>
+                            <p class="faq-answer" data-i18n="faq_pair_camera_a">Yes, you need to pair your camera within the GeoLink Pro app even if it's already paired with iOS. iOS apps don't have access to system Bluetooth pairing information, so each app needs to establish its own connection with your camera.</p>
                         </div>
                     </div>
 
@@ -85,16 +100,16 @@
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
-                                My camera won't connect. What should I do?
+                                <span data-i18n="faq_camera_wont_connect_q">My camera won't connect. What should I do?</span>
                             </button>
                         </h3>
                         <div class="faq-answer-wrapper">
-                            <p class="faq-answer">If your camera isn't connecting, try unpairing and pairing again:</p>
+                            <p class="faq-answer" data-i18n="faq_camera_wont_connect_intro">If your camera isn't connecting, try unpairing and pairing again:</p>
                             <ul class="faq-steps">
-                                <li>Unpair the camera from both the GeoLink Pro app and iOS system settings</li>
-                                <li>Pair the camera again through the app</li>
+                                <li data-i18n="faq_camera_wont_connect_step1">Unpair the camera from both the GeoLink Pro app and iOS system settings</li>
+                                <li data-i18n="faq_camera_wont_connect_step2">Pair the camera again through the app</li>
                             </ul>
-                            <p class="faq-answer" style="margin-top: 0.75rem;">This often resolves connection issues by establishing a fresh Bluetooth connection.</p>
+                            <p class="faq-answer" style="margin-top: 0.75rem;" data-i18n="faq_camera_wont_connect_followup">This often resolves connection issues by establishing a fresh Bluetooth connection.</p>
                         </div>
                     </div>
 
@@ -102,18 +117,18 @@
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
-                                The app isn't recording my location. What should I do?
+                                <span data-i18n="faq_not_recording_q">The app isn't recording my location. What should I do?</span>
                             </button>
                         </h3>
                         <div class="faq-answer-wrapper">
-                            <p class="faq-answer">If the app isn't recording your location, try these troubleshooting steps:</p>
+                            <p class="faq-answer" data-i18n="faq_not_recording_intro">If the app isn't recording your location, try these troubleshooting steps:</p>
                             <ul class="faq-steps">
-                                <li>Make sure at least one camera is paired and powered on</li>
-                                <li>Verify that location services are enabled and GeoLink Pro has permission to access your location</li>
-                                <li>Ensure Bluetooth permission is granted and Bluetooth is enabled on your iPhone</li>
-                                <li>Check that the distance filter in app settings is set to a reasonable value (the default is None)</li>
-                                <li>Confirm you're in an area with good GPS signal</li>
-                                <li>Check that your device isn't in low power mode</li>
+                                <li data-i18n="faq_not_recording_step1">Make sure at least one camera is paired and powered on</li>
+                                <li data-i18n="faq_not_recording_step2">Verify that location services are enabled and GeoLink Pro has permission to access your location</li>
+                                <li data-i18n="faq_not_recording_step3">Ensure Bluetooth permission is granted and Bluetooth is enabled on your iPhone</li>
+                                <li data-i18n="faq_not_recording_step4">Check that the distance filter in app settings is set to a reasonable value (the default is None)</li>
+                                <li data-i18n="faq_not_recording_step5">Confirm you're in an area with good GPS signal</li>
+                                <li data-i18n="faq_not_recording_step6">Check that your device isn't in low power mode</li>
                             </ul>
                         </div>
                     </div>
@@ -122,26 +137,26 @@
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
-                                My FUJIFILM camera isn't showing the location info synced icon or writing location data to photos. Why?
+                                <span data-i18n="faq_fujifilm_sync_q">My FUJIFILM camera isn't showing the location info synced icon or writing location data to photos. Why?</span>
                             </button>
                         </h3>
                         <div class="faq-answer-wrapper">
-                            <p class="faq-answer">If your FUJIFILM camera isn't displaying the location sync icon or embedding location data in your photos, check the following camera settings:</p>
-                            <p class="faq-subsection">In your camera settings:</p>
+                            <p class="faq-answer" data-i18n="faq_fujifilm_sync_intro">If your FUJIFILM camera isn't displaying the location sync icon or embedding location data in your photos, check the following camera settings:</p>
+                            <p class="faq-subsection" data-i18n="camera_settings_heading">In your camera settings:</p>
                             <ul class="faq-steps">
-                                <li>Go to <strong>NETWORK/USB SETTING</strong> > <strong>Bluetooth/SMARTPHONE SETTING</strong> > <strong>SMARTPHONE LOCATION SYNC.</strong> and ensure it's set to <strong>ON</strong></li>
-                                <li>Go to <strong>SET UP</strong> > <strong>SAVE DATA SETTING</strong> > <strong>GEOTAGGING</strong> and ensure it's set to <strong>ON</strong></li>
-                                <li>Go to <strong>SET UP</strong> > <strong>SCREEN SET-UP</strong> > <strong>LOCATION INFO</strong> and ensure it's set to <strong>ON</strong></li>
-                                <li>Go to <strong>SET UP</strong> > <strong>SCREEN SET-UP</strong> > <strong>DISP. CUSTOM SETTING</strong> > <strong>COMMUNICATION STATUS</strong> and ensure it's set to <strong>ON</strong></li>
+                                <li data-i18n-html="faq_fujifilm_sync_camera_step1">Go to <strong>NETWORK/USB SETTING</strong> > <strong>Bluetooth/SMARTPHONE SETTING</strong> > <strong>SMARTPHONE LOCATION SYNC.</strong> and ensure it's set to <strong>ON</strong></li>
+                                <li data-i18n-html="faq_fujifilm_sync_camera_step2">Go to <strong>SET UP</strong> > <strong>SAVE DATA SETTING</strong> > <strong>GEOTAGGING</strong> and ensure it's set to <strong>ON</strong></li>
+                                <li data-i18n-html="faq_fujifilm_sync_camera_step3">Go to <strong>SET UP</strong> > <strong>SCREEN SET-UP</strong> > <strong>LOCATION INFO</strong> and ensure it's set to <strong>ON</strong></li>
+                                <li data-i18n-html="faq_fujifilm_sync_camera_step4">Go to <strong>SET UP</strong> > <strong>SCREEN SET-UP</strong> > <strong>DISP. CUSTOM SETTING</strong> > <strong>COMMUNICATION STATUS</strong> and ensure it's set to <strong>ON</strong></li>
                             </ul>
-                            <p class="faq-subsection">In the GeoLink Pro app:</p>
+                            <p class="faq-subsection" data-i18n="app_settings_heading">In the GeoLink Pro app:</p>
                             <ul class="faq-steps">
-                                <li>Go to the camera detail view in the app</li>
-                                <li>Disable the camera connection, then re-enable it to reconnect and refresh the Bluetooth connection</li>
-                                <li>Verify that the camera shows as connected in the app and that location services are active</li>
-                                <li>If the issue persists, try unpairing the camera from the app and pairing it again</li>
+                                <li data-i18n="faq_fujifilm_sync_app_step1">Go to the camera detail view in the app</li>
+                                <li data-i18n="faq_fujifilm_sync_app_step2">Disable the camera connection, then re-enable it to reconnect and refresh the Bluetooth connection</li>
+                                <li data-i18n="faq_fujifilm_sync_app_step3">Verify that the camera shows as connected in the app and that location services are active</li>
+                                <li data-i18n="faq_fujifilm_sync_app_step4">If the issue persists, try unpairing the camera from the app and pairing it again</li>
                             </ul>
-                            <p class="faq-answer" style="margin-top: 1rem;">For detailed instructions specific to your camera model, please refer to your camera's manual. For X-T5 users, see the <a href="https://fujifilm-dsc.com/en/manual/x-t5/" target="_blank" rel="noopener noreferrer">X-T5 Owner's Manual</a>.</p>
+                            <p class="faq-answer" style="margin-top: 1rem;" data-i18n-html="faq_fujifilm_sync_footer">For detailed instructions specific to your camera model, please refer to your camera's manual. For X-T5 users, see the <a href="https://fujifilm-dsc.com/en/manual/x-t5/" target="_blank" rel="noopener noreferrer">X-T5 Owner's Manual</a>.</p>
                         </div>
                     </div>
 
@@ -149,24 +164,24 @@
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
-                                My Sony camera isn't showing the location indicator or writing location data to photos. Why?
+                                <span data-i18n="faq_sony_sync_q">My Sony camera isn't showing the location indicator or writing location data to photos. Why?</span>
                             </button>
                         </h3>
                         <div class="faq-answer-wrapper">
-                            <p class="faq-answer">If your Sony camera isn't displaying the location indicator or embedding location data in your photos, check the following camera settings:</p>
-                            <p class="faq-subsection">In your camera settings:</p>
+                            <p class="faq-answer" data-i18n="faq_sony_sync_intro">If your Sony camera isn't displaying the location indicator or embedding location data in your photos, check the following camera settings:</p>
+                            <p class="faq-subsection" data-i18n="camera_settings_heading">In your camera settings:</p>
                             <ul class="faq-steps">
-                                <li>Go to <strong>MENU</strong> > <strong>Network</strong> > <strong>Bluetooth</strong> and ensure it's set to <strong>ON</strong>, and that the camera is paired with the app</li>
-                                <li>Go to <strong>MENU</strong> > <strong>Network</strong> > <strong>Loc. Info. Link Set.</strong> > <strong>Location Info. Link</strong> and ensure it's set to <strong>ON</strong></li>
+                                <li data-i18n-html="faq_sony_sync_camera_step1">Go to <strong>MENU</strong> > <strong>Network</strong> > <strong>Bluetooth</strong> and ensure it's set to <strong>ON</strong>, and that the camera is paired with the app</li>
+                                <li data-i18n-html="faq_sony_sync_camera_step2">Go to <strong>MENU</strong> > <strong>Network</strong> > <strong>Loc. Info. Link Set.</strong> > <strong>Location Info. Link</strong> and ensure it's set to <strong>ON</strong></li>
                             </ul>
-                            <p class="faq-subsection">In the GeoLink Pro app:</p>
+                            <p class="faq-subsection" data-i18n="app_settings_heading">In the GeoLink Pro app:</p>
                             <ul class="faq-steps">
-                                <li>Go to the camera detail view in the app</li>
-                                <li>Disable the camera connection, then re-enable it to reconnect and refresh the Bluetooth connection</li>
-                                <li>Verify that the camera shows as connected in the app and that location services are active</li>
-                                <li>If the issue persists, try unpairing the camera from the app and pairing it again</li>
+                                <li data-i18n="faq_sony_sync_app_step1">Go to the camera detail view in the app</li>
+                                <li data-i18n="faq_sony_sync_app_step2">Disable the camera connection, then re-enable it to reconnect and refresh the Bluetooth connection</li>
+                                <li data-i18n="faq_sony_sync_app_step3">Verify that the camera shows as connected in the app and that location services are active</li>
+                                <li data-i18n="faq_sony_sync_app_step4">If the issue persists, try unpairing the camera from the app and pairing it again</li>
                             </ul>
-                            <p class="faq-answer" style="margin-top: 1rem;">For detailed instructions specific to your camera model, please refer to your camera's manual or Sony's support documentation.</p>
+                            <p class="faq-answer" style="margin-top: 1rem;" data-i18n="faq_sony_sync_footer">For detailed instructions specific to your camera model, please refer to your camera's manual or Sony's support documentation.</p>
                         </div>
                     </div>
 
@@ -174,16 +189,16 @@
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
-                                My FUJIFILM camera is writing outdated location information to my photos. Why?
+                                <span data-i18n="faq_fujifilm_outdated_q">My FUJIFILM camera is writing outdated location information to my photos. Why?</span>
                             </button>
                         </h3>
                         <div class="faq-answer-wrapper">
-                            <p class="faq-answer">FUJIFILM cameras cache location data and will continue using the last received location information for up to 3 hours. After this period, the location data expires and the camera stops writing location information to new photos.</p>
-                            <p class="faq-answer" style="margin-top: 0.75rem;">Additionally, when you first turn on your camera, GeoLink Pro needs approximately 10 seconds to establish the Bluetooth connection and start sending location updates. During this initial connection period, your camera may use outdated or no location data.</p>
-                            <p class="faq-answer" style="margin-top: 0.75rem;">To ensure accurate location data:</p>
+                            <p class="faq-answer" data-i18n="faq_fujifilm_outdated_p1">FUJIFILM cameras cache location data and will continue using the last received location information for up to 3 hours. After this period, the location data expires and the camera stops writing location information to new photos.</p>
+                            <p class="faq-answer" style="margin-top: 0.75rem;" data-i18n="faq_fujifilm_outdated_p2">Additionally, when you first turn on your camera, GeoLink Pro needs approximately 10 seconds to establish the Bluetooth connection and start sending location updates. During this initial connection period, your camera may use outdated or no location data.</p>
+                            <p class="faq-answer" style="margin-top: 0.75rem;" data-i18n="faq_fujifilm_outdated_p3">To ensure accurate location data:</p>
                             <ul class="faq-steps">
-                                <li>Wait until the app connects to the camera after it's powered on before taking photos</li>
-                                <li>Check that both the communication (Bluetooth) status icon and the location status icon are displayed on your camera's screen, indicating an active connection and location sync. You can also verify the connection status in the GeoLink Pro app</li>
+                                <li data-i18n="faq_fujifilm_outdated_step1">Wait until the app connects to the camera after it's powered on before taking photos</li>
+                                <li data-i18n="faq_fujifilm_outdated_step2">Check that both the communication (Bluetooth) status icon and the location status icon are displayed on your camera's screen, indicating an active connection and location sync. You can also verify the connection status in the GeoLink Pro app</li>
                             </ul>
                         </div>
                     </div>
@@ -192,12 +207,12 @@
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
-                                Which cameras are compatible with GeoLink Pro?
+                                <span data-i18n="faq_compatible_q">Which cameras are compatible with GeoLink Pro?</span>
                             </button>
                         </h3>
                         <div class="faq-answer-wrapper">
-                            <p class="faq-answer">GeoLink Pro works with cameras that support Bluetooth connectivity for geotagging. Below is a list of compatible camera models:</p>
-                            <p class="faq-subsection">Verified and tested cameras:</p>
+                            <p class="faq-answer" data-i18n="faq_compatible_intro">GeoLink Pro works with cameras that support Bluetooth connectivity for geotagging. Below is a list of compatible camera models:</p>
+                            <p class="faq-subsection" data-i18n="faq_compatible_verified_heading">Verified and tested cameras:</p>
                             <ul class="faq-steps">
                                 <li>Sony a7C II</li>
                                 <li>Sony a7 IV</li>
@@ -205,18 +220,18 @@
                                 <li>FUJIFILM X100VI</li>
                                 <li>FUJIFILM X-T5</li>
                             </ul>
-                            <p class="faq-subsection">Likely compatible (not fully tested):</p>
+                            <p class="faq-subsection" data-i18n="faq_compatible_likely_heading">Likely compatible (not fully tested):</p>
                             <ul class="faq-steps">
                                 <li>Sony a1 and a1 II</li>
                                 <li>Sony a7 III</li>
                                 <li>Sony a7R V, a7R IV, and a7R III</li>
                                 <li>Sony a7C</li>
                                 <li>Sony a7CR</li>
-                                <li>Any Sony camera that works with the Creators' app</li>
-                                <li>Any Sony camera that works with Imaging Edge Mobile</li>
-                                <li>Any FUJIFILM camera that works with XApp</li>
+                                <li data-i18n="faq_compatible_sony_creators">Any Sony camera that works with the Creators' app</li>
+                                <li data-i18n="faq_compatible_sony_imaging">Any Sony camera that works with Imaging Edge Mobile</li>
+                                <li data-i18n="faq_compatible_fujifilm_xapp">Any FUJIFILM camera that works with XApp</li>
                             </ul>
-                            <p class="faq-answer" style="margin-top: 1rem;">If your camera supports Bluetooth connectivity but isn't listed above, it may still be compatible with GeoLink Pro.</p>
+                            <p class="faq-answer" style="margin-top: 1rem;" data-i18n="faq_compatible_footer">If your camera supports Bluetooth connectivity but isn't listed above, it may still be compatible with GeoLink Pro.</p>
                         </div>
                     </div>
 
@@ -224,23 +239,23 @@
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
-                                What's the difference between Free and Pro mode?
+                                <span data-i18n="faq_free_vs_pro_q">What's the difference between Free and Pro mode?</span>
                             </button>
                         </h3>
                         <div class="faq-answer-wrapper">
-                            <p class="faq-answer">GeoLink Pro offers a free mode for basic use and a subscription-based Pro mode for unlocking the full experience:</p>
-                            <p class="faq-subsection">Free mode:</p>
+                            <p class="faq-answer" data-i18n="faq_free_vs_pro_intro">GeoLink Pro offers a free mode for basic use and a subscription-based Pro mode for unlocking the full experience:</p>
+                            <p class="faq-subsection" data-i18n="faq_free_vs_pro_free_heading">Free mode:</p>
                             <ul class="faq-steps">
-                                <li>Available at no cost</li>
-                                <li>Location accuracy is restricted to "Reduced" mode</li>
-                                <li>Limited to pairing with one camera at a time</li>
+                                <li data-i18n="faq_free_vs_pro_free_step1">Available at no cost</li>
+                                <li data-i18n="faq_free_vs_pro_free_step2">Location accuracy is restricted to "Reduced" mode</li>
+                                <li data-i18n="faq_free_vs_pro_free_step3">Limited to pairing with one camera at a time</li>
                             </ul>
-                            <p class="faq-subsection">Pro mode (subscription):</p>
+                            <p class="faq-subsection" data-i18n="faq_free_vs_pro_pro_heading">Pro mode (subscription):</p>
                             <ul class="faq-steps">
-                                <li>Removes the location accuracy restriction for full precision geotagging</li>
-                                <li>Allows unlimited cameras to be paired simultaneously</li>
-                                <li>Provides access to more advanced controls and customization options</li>
-                                <li>Unlocks all future GeoLink Pro features as they are released</li>
+                                <li data-i18n="faq_free_vs_pro_pro_step1">Removes the location accuracy restriction for full precision geotagging</li>
+                                <li data-i18n="faq_free_vs_pro_pro_step2">Allows unlimited cameras to be paired simultaneously</li>
+                                <li data-i18n="faq_free_vs_pro_pro_step3">Provides access to more advanced controls and customization options</li>
+                                <li data-i18n="faq_free_vs_pro_pro_step4">Unlocks all future GeoLink Pro features as they are released</li>
                             </ul>
                         </div>
                     </div>
@@ -249,34 +264,35 @@
                         <h3 class="faq-question">
                             <button class="faq-toggle" aria-expanded="false">
                                 <span class="faq-icon">+</span>
-                                How can I contact support?
+                                <span data-i18n="faq_contact_q">How can I contact support?</span>
                             </button>
                         </h3>
                         <div class="faq-answer-wrapper">
-                            <p class="faq-answer">If you can't find the answer to your question here, please email us at geolinkpro.contact@gmail.com with details about your issue.</p>
+                            <p class="faq-answer" data-i18n="faq_contact_a">If you can't find the answer to your question here, please email us at geolinkpro.contact@gmail.com with details about your issue.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
             <section class="contact">
-                <h2>Contact Support</h2>
-                <p>Need additional help? Reach out to us:</p>
+                <h2 data-i18n="contact_heading">Contact Support</h2>
+                <p data-i18n="contact_text">Need additional help? Reach out to us:</p>
                 <p><a href="mailto:geolinkpro.contact@gmail.com">geolinkpro.contact@gmail.com</a></p>
             </section>
         </main>
 
         <footer>
-            <p>&copy; 2025 GeoLink Pro. All rights reserved.</p>
+            <p data-i18n="footer_copyright">&copy; 2025 GeoLink Pro. All rights reserved.</p>
         </footer>
     </div>
+    <script src="i18n.js"></script>
     <script>
         // Function to expand a FAQ item
         function expandFaq(faqItem) {
             const button = faqItem.querySelector('.faq-toggle');
             const answerWrapper = faqItem.querySelector('.faq-answer-wrapper');
             const icon = button.querySelector('.faq-icon');
-            
+
             button.setAttribute('aria-expanded', 'true');
             answerWrapper.classList.add('expanded');
             icon.textContent = '−';
@@ -287,7 +303,7 @@
             const button = faqItem.querySelector('.faq-toggle');
             const answerWrapper = faqItem.querySelector('.faq-answer-wrapper');
             const icon = button.querySelector('.faq-icon');
-            
+
             button.setAttribute('aria-expanded', 'false');
             answerWrapper.classList.remove('expanded');
             icon.textContent = '+';
@@ -297,7 +313,7 @@
         function toggleFaq(faqItem) {
             const button = faqItem.querySelector('.faq-toggle');
             const isExpanded = button.getAttribute('aria-expanded') === 'true';
-            
+
             if (isExpanded) {
                 collapseFaq(faqItem);
             } else {
@@ -310,9 +326,9 @@
             button.addEventListener('click', () => {
                 const faqItem = button.closest('.faq-item');
                 const faqId = faqItem.id;
-                
+
                 toggleFaq(faqItem);
-                
+
                 // Update URL hash
                 if (faqItem.querySelector('.faq-toggle').getAttribute('aria-expanded') === 'true') {
                     window.location.hash = faqId;
@@ -359,4 +375,3 @@
     </script>
 </body>
 </html>
-
