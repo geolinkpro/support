@@ -215,14 +215,18 @@ footer {
 }
 
 @media (max-width: 600px) {
+    header {
+        padding-top: 2.5rem;
+    }
+
     header h1 {
         font-size: 2rem;
     }
-    
+
     .container {
         padding: 1.5rem 1rem;
     }
-    
+
     .faq-item {
         padding: 1.25rem;
     }
